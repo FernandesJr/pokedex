@@ -20,11 +20,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'pokedex'`, () => {
+  /*it(`should have as title 'pokedex'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('pokedex');
-  });
+  });*/
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
