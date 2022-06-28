@@ -1,6 +1,6 @@
-@use './app/config-scss/variables.scss';
-@use './app/config-scss/reset.scss';
-@use './app/config-scss/rem-calc.scss';
+@import './app/config-scss/variables.scss';
+@import './app/config-scss/reset.scss';
+@import './app/config-scss/rem-calc.scss';
 
 html {
   background: var(--primary-color);
