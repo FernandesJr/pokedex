@@ -17,6 +17,7 @@ $padding: rem-calc(20);
     width: 42%;
     padding: rem-calc(20);
     height: rem-calc(157 - 40);
+    margin-bottom: rem-calc(10);
 
     border-radius: rem-calc(10);
 
@@ -26,6 +27,7 @@ $padding: rem-calc(20);
         font-weight: 700;
         font-size: rem-calc(25);
         margin-bottom: rem-calc(13);
+        text-transform: capitalize; //Primeira letra maiscula
       }
 
       ul {
@@ -49,12 +51,19 @@ $padding: rem-calc(20);
     }
 
     &__image {
-      img {
-        background-image: url('../../../assets/bg.svg');
-        width: rem-calc(90);
-        height: rem-calc(90);
+        position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 
-        margin-top: rem-calc(35);
+				height: rem-calc(90);
+				width: rem-calc(110);
+
+				right: $padding;
+				bottom: $padding;
+        background: url('../../../assets/bg.svg') no-repeat;
+      img {
+        width: rem-calc(60);
       }
     }
   }
