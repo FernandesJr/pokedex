@@ -9,14 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class PokeListComponent implements OnInit {
 
   public pokemons: any;
+  private pokemonsFixe: any;
 
   constructor(private pokeApiService: PokeApiService) { }
 
   ngOnInit(): void {
     this.pokeApiService.apiListAllPokemons.subscribe(res => {
-      this.pokemons = res.results;
-      console.log(res);
+      this.pokemonsFixe = res.results;
+      this.pokemons = this.pokemonsFixe;
     });
+  }
+
+  public getSearch(value: string) {
+    const filter = this.pokemonsFixe.filter((res: any) => {
+      return !res.name.indexOf(value.toLowerCase()); // Retornando somente o que é parecido
+    });
+    this.pokemons = filter;
   }
 
 }

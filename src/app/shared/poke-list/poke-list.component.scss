@@ -3,67 +3,72 @@
 $padding: rem-calc(20);
 
 :host {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; //para quebrar para a próxima linha quando não caber mais
-  padding: $padding 0;
-
-  .pokemon {
-    position: relative;
-		display: flex;
+  .listagem {
+    display: flex;
     justify-content: space-between;
-    background: var(--branco);
+    flex-wrap: wrap; //para quebrar para a próxima linha quando não caber mais
+    padding: $padding 0;
 
-    width: 42%;
-    padding: rem-calc(20);
-    height: rem-calc(157 - 40);
-    margin-bottom: rem-calc(10);
+    .pokemon {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      background: var(--branco);
 
-    border-radius: rem-calc(10);
+      width: 42%;
+      padding: rem-calc(20);
+      height: rem-calc(157 - 40);
+      margin-bottom: rem-calc(10);
 
-    &__status {
-      h2 {
-        font-style: italic;
-        font-weight: 700;
-        font-size: rem-calc(25);
-        margin-bottom: rem-calc(13);
-        text-transform: capitalize; //Primeira letra maiscula
-      }
+      border-radius: rem-calc(10);
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        li {
-          background: var(--cinza);
-          font-size: rem-calc(10);
+      text-decoration: none;
+      color: var(--primary-color);
 
+      &__status {
+        h2 {
+          font-style: italic;
+          font-weight: 700;
+          font-size: rem-calc(25);
+          margin-bottom: rem-calc(13);
+          text-transform: capitalize; //Primeira letra maiscula
+        }
+
+        ul {
           display: flex;
-          justify-content: center;
-          align-items: center;
+          flex-direction: column;
+          li {
+            background: var(--cinza);
+            font-size: rem-calc(10);
 
-          border-radius: rem-calc(50);
-          width: rem-calc(60);
-          height: rem-calc(16);
-          margin-bottom: rem-calc(10);
-          padding: rem-calc(3) auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: rem-calc(50);
+            width: rem-calc(60);
+            height: rem-calc(16);
+            margin-bottom: rem-calc(10);
+            padding: rem-calc(3) auto;
+          }
         }
       }
-    }
 
-    &__image {
-        position: absolute;
-				display: flex;
-				align-items: center;
-				justify-content: center;
+      &__image {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-				height: rem-calc(90);
-				width: rem-calc(110);
+          height: rem-calc(90);
+          width: rem-calc(110);
 
-				right: $padding;
-				bottom: $padding;
-        background: url('../../../assets/bg.svg') no-repeat;
-      img {
-        width: rem-calc(60);
+          right: $padding;
+          bottom: $padding;
+          background: url('../../../assets/bg.svg') no-repeat;
+        img {
+          width: rem-calc(60);
+        }
       }
     }
   }
